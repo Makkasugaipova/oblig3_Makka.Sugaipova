@@ -4,6 +4,29 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Definerer et grid-container som inneholder header, main og footer */
+#grid-container {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+}
+/* Legger til litt padding til header, main og footer for mellomrom */
+header{
+    grid-column: 1/ span 1;
+    grid-row: 1/ span 1;
+}
+.boxto{
+    display: none;
+}
+
+main{
+    grid-column: 1/ span 1;
+    grid-row: 2/ span 1;
+}
+
+footer{
+    grid-column: 1/ span 1;
+    grid-row: 3/ span 1;
+}
 
 .hovedtekst{
     background-color: #D28C4B;
@@ -31,16 +54,8 @@ h5{
     margin-right: 2rem;
 }
 
-.fa-cart-shopping, .fa-user{
+.fa-cart-shopping, .fa-user, .fa-heart, .fa-headset, .fa-arrow-right-from-bracket{
     margin: 10px;
-}
-
-.boxto{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
 }
 
 .søk {
@@ -57,14 +72,40 @@ h5{
     font-weight: 200;
 }
 
-.kategorier {
+.box-produkt{
     display: flex;
-    justify-content: space-around;
-
+    justify-content: flex-end;
+    align-items: center;
+    gap: 35vw;
+    flex-direction: row;
 }
 
-.kategorier a {
+.boxto-mobil{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin-bottom: 10px;
+    flex-direction: row;
+    background-color: #D28C4B;
+}
+
+.kategorier-mobil{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.kategorier-mobil a {
     text-decoration: none;
+    background-color: #9c9c9c;
+    padding: 10px;
+    border-radius: 10px;
+}
+.kategorier-mobil a h5{
+    margin: 0;
+    color: black;
 }
 
 li {
@@ -76,19 +117,14 @@ li {
     flex-direction: row;
 }
 
-.navigasjon-bruker {
-    display: flex;
-    flex-direction: row;
-}
 
 .kjøp {
     text-align: center;
 }
 
-footer img{
-    max-width: 100%;
+.hovedbilde{
+    width: 100%;
 }
-
 main img{
     max-width: 100%;
 }
@@ -97,26 +133,321 @@ main img{
     text-align: center;
 }
 
-header
-
-/* Definerer et grid-container som inneholder header, main og footer */
-#grid-container {
-    display: grid;
-    grid-template-areas: "header" "main" "footer";
+.gulboks{
+    background-color: #dfba6a;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
 }
 
-/* Legger til litt padding til header, main og footer for mellomrom */
-header{
-    grid-column: 1/ span 1;
-    grid-row: 1/ span 1;
+.topp{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 50px;
+    align-items: center;
+    padding: 0;
+    border-bottom: solid;
+    border-color: #615B5D;
+    border-width: 2px;
 }
 
-main{
-    grid-column: 1/ span 1;
-    grid-row: 2/ span 1;
+.topp h1{
+    font-weight: 100;
 }
 
-footer{
-    grid-column: 1/ span 1;
-    grid-row: 3/ span 1;
+.sections{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.seksjon{
+    background-color: #D28C4B;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+.seksjon h2{
+    font-weight: 100;
+    padding-left: 20px;
+    margin: 10px;
+}
+
+.fa-arrow-left-long{
+    background-color: #bcbcbc;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.navigasjon-bruker{
+    padding: 10px;
+}
+
+.box-bruker{
+    display: flex;
+    justify-content: center;
+}
+
+.hei{
+    display: flex;
+    align-items: flex-start;
+    padding-left: 5px;
+    color: #615B5D;
+}
+
+.bildeslide{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.bildeslide p{
+    width: 20px;
+    height: 20px;
+    background-color: #9c9c9c;
+    border-radius: 10px;
+    font-size: x-small;
+    text-align: center;
+}
+.gulboks-produkt{
+    margin: auto;
+    margin-top: 20px;
+    background-color: #dfba6a;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+}
+.gulboks-produkt img{
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+.høyre-ikoner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.under-bilde{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.navn-pris{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 40px;
+}
+
+.navn-pris h2{
+    font-weight: 100;
+}
+
+.farge{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.farge h2{
+    margin: 0;
+}
+.farger{
+    display: flex;
+    flex-direction: row;
+}
+
+.f-en{
+    background-color: rgb(0, 0, 0);
+    width: 6vw;
+    height: 6vw;
+    border-radius: 10px;
+}
+.f-to{
+    background-color: rgb(86, 86, 86);
+    color: rgb(86, 86, 86);;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 10px;
+}
+.f-tre{
+    background-color: rgb(255, 255, 255);
+    color: white;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 10px;
+}
+
+.fa-chevron-down{
+    background-color: #9c9c9c;
+    width: 12vw;
+    height: 4vw;
+    text-align: end;
+    border-radius: 5px;
+    padding-right: 5px;
+}
+
+.under-bilde-to{
+    display: flex;
+    flex-direction: row;
+    padding-left: 40px;
+    gap: 30vw;
+    align-items: center;
+}
+
+.shopnow{
+    background-color: #D28C4B;
+    padding: 10px 5px;
+    width: 50vw;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-decoration: none;
+    color: #615B5D;
+}
+
+.box1, .box2{
+    background-color: #D28C4B;
+    padding: 70px 50px;
+    border-radius: 20px;
+    margin: 10px 0px;
+    color: black;
+    text-decoration: none;
+}
+.footer-index{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media only screen and (min-width: 600px) {
+    #grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "header header header" "main main main" "footer footer footer";
+    }
+    header{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    main {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    footer{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .kategorier-mobil, .boxto-mobil{
+        display: none;
+    }
+    .boxto{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 10px;
+        background-color: #D28C4B;
+    }
+    .boxto h2{
+        font-style: italic;
+        font-weight: 100;
+        background-color: #9c9c9c;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: medium;
+    }
+
+    .gulboks-produkt{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .desktop-produkt{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .f-en{
+        width: 20px;
+        height: 20px;
+    }
+    .f-to{
+        width: 20px;
+        height: 20px;
+    }
+    .f-tre{
+        width: 20px;
+        height: 20px;
+    }
+    .fa-chevron-down{
+        width: 50px;
+        height: 20px;
+    }
+
+    .under-bilde-to{
+        display: flex;
+        flex-direction: row;
+        padding-left: 40px;
+        gap: 10px;
+        align-items: baseline;
+    }
+    .under-bilde-to h2{
+        font-weight: 200;
+        font-size: medium;
+    }
+    .kategorier-mobil{
+        background-color: #D28C4B;
+        padding: 5px 0px;
+    }
+
+    .kategorier{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin: 10px 0px;
+    }
+    
+    .kategorier a {
+        text-decoration: none;
+        background-color: #9c9c9c;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .kategorier a h5{
+        margin: 0;
+        color: black;
+    }
+    .sections{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .seksjon{
+        background-color: #D28C4B;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 20px;
+    }
 }
